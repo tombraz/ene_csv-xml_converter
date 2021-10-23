@@ -34,6 +34,9 @@ const FilePicker: FC<FilePickerType> = () => {
   );
 
   const isFileRead = useSelector((state: RootState) => state.file.isFileRead);
+  const dataCount = useSelector(
+    (state: RootState) => state.records.data
+  )?.length;
 
   const [openFileSelector, { filesContent, clear }] = useFilePicker({
     multiple: false,
@@ -102,8 +105,9 @@ const FilePicker: FC<FilePickerType> = () => {
     dispatch(openModal());
   };
 
-  const readDataCount =
-    filesContent.length && createArray(filesContent)[1].length;
+  const readDataCount = dataCount
+    ? dataCount
+    : filesContent.length && createArray(filesContent)[1].length;
 
   const counterClasses = classNames("count", {
     count__amount: readDataCount,
