@@ -66,7 +66,8 @@
   }
 
   &__export {
-    background-color: $c-eneaBlue;
+    background-color: $c-orange;
+    width: 100%;
 
     &:hover {
       box-shadow: 0px 0px 10px $c-green;
@@ -75,6 +76,7 @@
 
   &__exported {
     background-color: $c-green;
+    width: 100%;
 
     &:hover {
       box-shadow: 0px 0px 10px $c-eneaBlue;

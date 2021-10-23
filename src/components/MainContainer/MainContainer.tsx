@@ -3,6 +3,9 @@ import PointsTable from "../PointsTable";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import Filter from "../Filter";
+import LeftCounter from "../LeftCounter";
+
+import "./MainContainer.scss";
 
 const MainContainer = () => {
   const data = useSelector((state: RootState) => state.records.data);
@@ -11,7 +14,10 @@ const MainContainer = () => {
 
   return (
     <div>
-      <Filter />
+      <div className="top-wrapper">
+        <LeftCounter />
+        <Filter />
+      </div>
       {renderTable}
     </div>
   );

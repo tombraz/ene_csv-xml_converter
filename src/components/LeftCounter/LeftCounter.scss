@@ -1,0 +1,16 @@
+@import "../../styles/common/index.scss";
+
+.left-counter {
+  display: flex;
+  align-items: center;
+  color: $c-white;
+  font-size: 23px;
+
+  &__text {
+    margin: 0 10px 0 20px;
+  }
+
+  &__count {
+    font-weight: bold;
+  }
+}
