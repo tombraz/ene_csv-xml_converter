@@ -1,0 +1,35 @@
+@import "../../styles/common/index.scss";
+
+.file-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    background-color: $c-white;
+    border-radius: 15px;
+    font-size: 25px;
+    color: $c-eneaBlue;
+
+    .count {
+      color: $c-red;
+      font-weight: 700;
+      margin-left: 20px;
+
+      &__amount {
+        color: $c-green;
+      }
+    }
+  }
+
+  .buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

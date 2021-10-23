@@ -1,0 +1,27 @@
+@import "../../styles//common/index.scss";
+
+.table {
+  margin: 0 auto;
+  &__header {
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: $c-eneaBlue;
+    color: $c-white;
+    height: 30px;
+    padding: 10px;
+
+    &:last-child {
+      background-color: unset;
+    }
+  }
+
+  &__row {
+    &:nth-child(2n) {
+      background-color: lighten($color: $c-eneaBlue, $amount: 50);
+    }
+
+    .row-item {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import "../../../styles/common/index.scss";
+
+.button {
+  font-size: 15px;
+  font-weight: 600;
+  width: 140px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: $c-white;
+
+  &:disabled {
+    cursor: not-allowed;
+
+    &:hover {
+      box-shadow: unset;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 10px $c-white;
+  }
+
+  &__pick {
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: $c-eneaBlue;
+    border: 3px solid $c-white;
+    transition: 0.3s;
+
+    &:hover {
+      color: $c-eneaBlue;
+      background-color: $c-white;
+      border: 3px solid $c-eneaBlue;
+    }
+
+    &:disabled {
+      background-color: darken($color: $c-eneaBlue, $amount: 20);
+      color: darken($color: $c-white, $amount: 50);
+      border: 3px solid darken($color: $c-white, $amount: 50);
+    }
+  }
+
+  &__populate {
+    background-color: $c-green;
+    // color: $c-white;
+
+    &:disabled {
+      background-color: darken($color: $c-green, $amount: 20);
+      color: darken($color: $c-white, $amount: 50);
+    }
+  }
+
+  &__clean {
+    background-color: $c-red;
+
+    &:disabled {
+      background-color: darken($color: $c-red, $amount: 20);
+      color: darken($color: $c-white, $amount: 50);
+    }
+  }
+
+  &__export {
+    background-color: $c-eneaBlue;
+
+    &:hover {
+      box-shadow: 0px 0px 10px $c-green;
+    }
+  }
+
+  &__exported {
+    background-color: $c-green;
+
+    &:hover {
+      box-shadow: 0px 0px 10px $c-eneaBlue;
+    }
+  }
+}

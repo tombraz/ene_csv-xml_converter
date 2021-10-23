@@ -1,0 +1,48 @@
+@import "../../styles//common/index.scss";
+
+.confirm-modal {
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $c-black-alpha;
+    z-index: 2;
+  }
+
+  &__content {
+    position: fixed;
+    top: 200px;
+    left: calc(50% - 200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    background-color: $c-white;
+    border-radius: 20px;
+    z-index: 3;
+
+    .content-header {
+      text-align: center;
+      margin: unset;
+    }
+
+    .content-text {
+      font-size: 20px;
+    }
+
+    .buttons-wrapper {
+      display: flex;
+      justify-content: space-around;
+
+      .button {
+        &:hover {
+          box-shadow: 0px 0px 10px $c-eneaBlue;
+        }
+      }
+    }
+  }
+}
